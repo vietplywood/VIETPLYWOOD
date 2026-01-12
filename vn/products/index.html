@@ -1,0 +1,1421 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VietPlywood - Ván ép Tiêu chuẩn Xuất khẩu</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/images/logo.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* --- VARIABLES --- */
+        :root {
+            --primary-dark: #513C2E;
+            --gradient-start: #746456;
+            --accent-wood: #B1967F;
+            --white: #FFFFFF;
+            --bg-light: #F7F2EE;
+            --text-main: #513C2E;
+            --btn-radius: 6px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* --- RESET --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; list-style: none; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; background-color: var(--bg-light); color: var(--text-main); scroll-behavior: smooth; }
+        a { text-decoration: none; color: inherit; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+        /* --- NAVBAR (GIỮ NGUYÊN HOÀN TOÀN) --- */
+        .navbar { background-color: var(--white); padding: 12px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
+        .nav-container { display: flex; align-items: center; justify-content: space-between; }
+        .logo-wrapper { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+        .logo-wrapper img { height: 35px; width: auto; display: block; }
+        .brand-name { font-size: 1.2rem; font-weight: 800; color: var(--primary-dark); text-transform: uppercase; }
+        .nav-right-group { display: flex; align-items: center; gap: 10px; }
+        .nav-links { display: flex; gap: 5px; margin-right: 10px; }
+        .nav-links li a { padding: 8px 16px; font-size: 0.85rem; font-weight: 600; color: var(--text-main); border-radius: var(--btn-radius); transition: var(--transition); }
+        .nav-links li a:hover, .nav-links li a.active { background: var(--primary-dark); color: var(--white) !important; }
+        .menu-toggle { display: none; font-size: 1.3rem; color: var(--primary-dark); cursor: pointer; padding: 5px; }
+        .custom-select { position: relative; width: 60px; cursor: pointer; user-select: none; }
+        .select-trigger { padding: 6px 10px; background: #F5F5F5; border-radius: var(--btn-radius); font-size: 0.75rem; font-weight: 700; display: flex; align-items: center; justify-content: space-between; }
+        .select-options { position: absolute; top: calc(100% + 10px); right: 0; background: var(--white); border-radius: var(--btn-radius); box-shadow: 0 10px 25px rgba(0,0,0,0.1); overflow: hidden; opacity: 0; visibility: hidden; transform: translateY(-10px); transition: var(--transition); min-width: 70px; }
+        .custom-select.open .select-options { opacity: 1; visibility: visible; transform: translateY(0); }
+        .option { padding: 8px; font-size: 0.75rem; text-align: center; font-weight: 600; }
+        .option:hover { background: var(--primary-dark); /* Màu #513C2E */
+            color: var(--white);            /* Chữ trắng để dễ đọc */ }
+
+        /* --- HERO SECTION (CẬP NHẬT THEO YÊU CẦU) --- */
+        .hero-wrapper {
+            padding: 20px 0 60px 0;
+            background-color: #F7F2EE;
+        }
+
+        .hero-banner {
+            position: relative;
+            width: 100%;
+            height: 540px;
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            /* YÊU CẦU: Linear ảnh rõ hơn (Sáng Trái-Trên -> Tối Phải-Dưới) */
+            background-image:
+                    linear-gradient(
+                            90deg,
+                            rgba(0,0,0,0.35) 0%,
+                            rgba(0,0,0,0.05) 50%,
+                            rgba(0,0,0,0.35) 100%
+                    ),
+                    linear-gradient(
+                            145deg,
+                            rgba(255,255,255,0.2),
+                            rgba(0,0,0,0.5)
+                    ),
+                    url('./assets/images/index_background.png');
+
+            background-position: center;
+            background-size: 140%;
+        }
+
+        .hero-content { max-width: 850px; color: var(--white); z-index: 2; padding: 0 20px; }
+        .hero-content h1 { font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 800; line-height: 1.1; margin-bottom: 20px; text-shadow: 0 2px 10px rgba(0,0,0,0.3); }
+        .hero-content p { font-size: 1.1rem; margin-bottom: 40px; font-weight: 400; opacity: 0.95; }
+
+        .hero-btns { display: flex; gap: 20px; justify-content: center; align-items: center; }
+
+        /* Hiệu ứng chung nút Hero */
+        .btn-hero {
+            padding: 16px 36px;
+            border-radius: var(--btn-radius);
+            font-size: 0.95rem;
+            font-weight: 700;
+            transition: all 0.15s ease;
+            display: inline-block;
+            position: relative;
+            top: 0;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Nút Liên hệ */
+        .btn-contact-hero {
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            color: var(--white);
+            backdrop-filter: blur(5px);
+        }
+        .btn-contact-hero:hover { background: rgba(255, 255, 255, 0.25); transform: translateY(-2px); }
+        .btn-contact-hero:active { top: 3px; transform: translateY(0); box-shadow: inset 0 4px 6px rgba(0,0,0,0.4); }
+
+        /* YÊU CẦU: Nút Tải Catalog + Linear Color + Hover + Download */
+        .btn-catalog-hero {
+            background: linear-gradient(88deg, #BEA48E 0%, #9C826D 100%);
+            color: var(--white);
+        }
+        .btn-catalog-hero:hover {
+            background: linear-gradient(180deg, #cfb9a6 0%, #ad917a 100%);
+            transform: translateY(-2px);
+        }
+        .btn-catalog-hero:active {
+            top: 5px; /* Lún xuống khớp với độ dày shadow */
+            transform: translateY(0);
+            box-shadow: 0 0px 0 #7A6554;
+        }
+
+        /* --- (CÁC PHẦN DƯỚI GIỮ NGUYÊN) --- */
+        .section { padding: 80px 0; }
+        .quality-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .quality-visuals { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        .v-card { padding: 30px; border-radius: var(--btn-radius); color: white; }
+        .v-1 { background: white; color: var(--primary-dark); border: 1px solid #ddd; text-align: center; }
+        .v-2 { background: var(--accent-wood); }
+        .v-3 { background: var(--primary-dark); grid-column: span 2; }
+        .sub-title { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; color: var(--accent-wood); letter-spacing: 1px; margin-bottom: 10px; display: block; }
+        h2 { font-size: 2.2rem; color: var(--primary-dark); margin-bottom: 25px; font-weight: 800; }
+        .bg-white { background-color: var(--white); }
+        .product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; margin-top: 40px; }
+        .p-card { background: #fff; border-radius: var(--btn-radius); overflow: hidden; border: 1px solid #eee; transition: var(--transition); }
+        .p-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .p-img { height: 220px; }
+        .p-img img { width: 100%; height: 100%; object-fit: cover; }
+        .p-info { padding: 20px; text-align: center; }
+        .stats { background: var(--primary-dark); color: white; padding: 60px 0; text-align: center; }
+        .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .stat-item h3 { font-size: 2.8rem; font-weight: 800; margin-bottom: 5px; }
+        .stat-item p { font-size: 0.9rem; opacity: 0.8; text-transform: uppercase; letter-spacing: 1px; }
+        .contact-box { background: #F3EFE8; padding: 50px; border-radius: 12px; display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
+        .c-form { background: white; padding: 30px; border-radius: var(--btn-radius); }
+        .c-form input, .c-form textarea { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 4px; outline: none; font-family: inherit; }
+        .btn-submit { width: 100%; padding: 14px; background: var(--primary-dark); color: white; border: none; border-radius: var(--btn-radius); font-weight: 700; cursor: pointer; transition: var(--transition); }
+        .btn-submit:hover { background: var(--gradient-start); }
+        footer { padding: 40px 0; background: var(--white); border-top: 1px solid #eee; text-align: center; font-size: 0.85rem; color: #777; }
+
+        @media (max-width: 992px) {
+            .nav-links { display: none; }
+            .quality-grid, .product-grid, .contact-box { grid-template-columns: 1fr; }
+            .hero-banner { height: 450px; }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="container nav-container">
+        <a href="#" class="logo-wrapper">
+            <img src="./assets/images/logo.svg" alt="Logo">
+            <span class="brand-name">VietPlywood</span>
+        </a>
+
+        <div class="nav-right-group">
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#" class="active">Trang chủ</a></li>
+                <li><a href="./vn/catalog/index.html">Catalog</a></li>
+                <li><a href="./vn/products/index.html">Sản phẩm</a></li>
+                <li><a href="./vn/blogs/index.html">Blog</a></li>
+                <li><a href="./vn/about/index.html">Về chúng tôi</a></li>
+                <li><a href="./vn/concat/index.html">Báo giá</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <div class="custom-select" id="langSelect">
+                    <div class="select-trigger">
+                        <span id="currentLang">VN</span>
+                        <i class="fa-solid fa-chevron-down" style="font-size: 0.5rem;"></i>
+                    </div>
+                    <div class="select-options">
+                        <div class="option" data-value="VN">VN</div>
+                        <div class="option" data-value="EN">EN</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<header class="hero-wrapper">
+    <div class="container">
+        <div class="hero-banner">
+            <div class="hero-content">
+                <h1>Ván ép Tiêu chuẩn <br> Giải pháp cho Sản xuất <br> Quy mô lớn</h1>
+                <p>Chất lượng ổn định · Sản xuất chủ động · Tiêu chuẩn thị trường · Giao hàng <br> Đúng tiến độ · Tiết kiệm chi phí</p>
+                <div class="hero-btns">
+                    <a href="./vn/concat/index.html" class="btn-hero btn-contact-hero">Liên hệ chúng tôi</a>
+                    <a href="./assets/images/chat_luong.svg" download class="btn-hero btn-catalog-hero">Tải Catalog</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="about-section">
+    <div class="container about-container">
+
+        <div class="bento-column-left">
+            <div class="bento-wrapper">
+                <div class="bento-box bento-white box-small">
+                    <div class="bento-icon-wrap">
+                        <img src="./assets/images/chat_luong.svg" alt="Chất lượng" class="bento-svg">
+                    </div>
+                    <span class="bento-label">Chất lượng được kiểm soát</span>
+                </div>
+
+                <div class="bento-box bento-tan box-large">
+                    <div class="bento-big-text">100%</div>
+                    <span class="bento-label-small">Nguồn nguyên liệu ổn định</span>
+                </div>
+
+                <div class="bento-box bento-dark box-large">
+                    <div class="bento-big-text">7+</div>
+                    <span class="bento-label-small">Năm kinh nghiệm</span>
+                </div>
+
+                <div class="bento-box bento-white box-small">
+                    <div class="bento-icon-wrap">
+                        <img src="./assets/images/bat_tay.svg" alt="Hợp tác" class="bento-svg">
+                    </div>
+                    <span class="bento-label">Chủ động sản xuất</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="about-content-right">
+            <span class="about-sub">TẦM NHÌN & SỨ MỆNH</span>
+            <h2 class="about-title">Chất lượng trong từng lớp ván</h2>
+            <p class="about-desc">
+                Chúng tôi hướng tới trở thành nhà cung cấp ván ép và ván bóc <strong>đạt tiêu chuẩn xuất khẩu</strong>,
+                được các doanh nghiệp trong và ngoài nước tin tưởng lựa chọn nhờ chất lượng ổn định,
+                nguồn cung bền vững và khả năng đáp ứng tiến độ sản xuất.
+            </p>
+
+            <div class="about-features">
+                <div class="feature-line">
+                    <strong>Đảm bảo kiểm soát độ bền và tính ổn định</strong>
+                    <p>Sản phẩm được sản xuất với độ dày, độ ẩm và chất lượng đồng đều, phù hợp cho các dây chuyền sản xuất công nghiệp.</p>
+                </div>
+                <div class="feature-line">
+                    <strong>Nguồn cung ổn định, chủ động</strong>
+                    <p>Khả năng sản xuất ổn định cho phép đáp ứng các đơn hàng khối lượng lớn và lặp lại.</p>
+                </div>
+            </div>
+
+            <a href="./vn/about/index.html" class="btn-about-more">Hiểu thêm về chúng tôi</a>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* --- SECTION ABOUT COMPLETED --- */
+    .about-section {
+        padding: 120px 0;
+        background-color: #fff;
+        overflow: hidden;
+    }
+
+    .about-container {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 80px;
+        align-items: flex-start;
+    }
+
+    /* Bento Wrapper & Grid Logic */
+    .bento-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 60px 140px 220px; /* Hàng 1 đệm cho bên phải nhô lên */
+        gap: 20px;
+    }
+
+    /* Kiểu dáng Box */
+    .bento-box {
+        border-radius: 20px;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 15px 45px rgba(0,0,0,0.05);
+        background: #fff;
+        box-sizing: border-box;
+        transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        cursor: pointer;
+        position: relative;
+        z-index: 1;
+    }
+
+    /* Hover Effect */
+    .bento-box:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
+        z-index: 10;
+    }
+
+    /* Kích thước Box */
+    .box-large {
+        height: 220px; /* 2 khối Large bằng nhau tuyệt đối */
+        justify-content: flex-end;
+    }
+    .box-small {
+        height: 140px;
+        justify-content: space-between;
+    }
+
+    /* Điều phối vị trí so le */
+    .bento-wrapper .bento-box:nth-child(1) { grid-column: 1; grid-row: 2 / 3; } /* Trái nhỏ thụt xuống */
+    .bento-wrapper .bento-box:nth-child(3) { grid-column: 1; grid-row: 3 / 4; } /* Trái lớn dưới cùng */
+    .bento-wrapper .bento-box:nth-child(2) { grid-column: 2; grid-row: 1 / 3; } /* Phải lớn nhô cao nhất */
+    .bento-wrapper .bento-box:nth-child(4) { grid-column: 2; grid-row: 3 / 4; } /* Phải nhỏ dưới cùng */
+
+    /* Màu sắc & Hiệu ứng hover riêng */
+    .bento-white { background: #FDFBF9; border: 1px solid #F1EDE9; }
+    .bento-tan { background: linear-gradient(135deg, #BEA48E 0%, #BCA089 100%); color: #fff; }
+    .bento-dark { background: linear-gradient(135deg, #513C2E 0%, #3A2B21 100%); color: #fff; }
+
+    .bento-tan:hover { background: linear-gradient(135deg, #BEA48E 0%, #BCA089 100%);  }
+    .bento-dark:hover {  background: linear-gradient(135deg, #513C2E 0%, #3A2B21 100%); }
+
+    /* SVG Icon Styles */
+    .bento-icon-wrap {
+        width: 45px;
+        height: 45px;
+        margin-bottom: 10px;
+    }
+    .bento-svg {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        transition: transform 0.3s ease;
+    }
+    .bento-box:hover .bento-svg {
+        transform: scale(1.1) rotate(5deg);
+    }
+
+    /* Text Styles */
+    .bento-big-text {
+        font-size: 3.2rem;
+        font-weight: 800;
+        line-height: 1;
+        margin-bottom: 8px;
+    }
+    .bento-label {
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: #3D2B1F;
+    }
+    .bento-label-small {
+        font-size: 0.85rem;
+        opacity: 0.9;
+    }
+
+    /* Right Content */
+    .about-content-right { padding-top: 40px; }
+    .about-sub { color: #C4A484; font-weight: 700; font-size: 0.8rem; letter-spacing: 2px; margin-bottom: 20px; display: block; }
+    .about-title { font-size: 2.8rem; font-weight: 800; color: #3D2B1F; line-height: 1.1; margin-bottom: 30px; }
+    .about-desc { color: #666; margin-bottom: 40px; line-height: 1.6; }
+    .feature-line { border-left: 2px solid #C4A484; padding-left: 25px; margin-bottom: 30px; }
+    .feature-line strong { display: block; color: #3D2B1F; margin-bottom: 5px; font-size: 1.1rem; }
+    .btn-about-more {
+        padding: 15px 35px;  background: linear-gradient(135deg, #513C2E 0%, #746456 100%); color: #fff !important;
+        border-radius: 6px; font-weight: 700; display: inline-block; transition: 0.3s;
+    }
+    .btn-about-more:hover {  background: linear-gradient(135deg, #513C2E 0%, #746456 100%); transform: translateY(-3px); }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+        .about-container { grid-template-columns: 1fr; gap: 40px; }
+        .bento-wrapper { grid-template-rows: auto auto auto; }
+        .box-large, .box-small { height: 180px; }
+        .about-content-right { padding-top: 0; }
+    }
+</style>
+<section class="products-section">
+    <div class="container">
+        <div class="products-header">
+            <div class="header-left">
+                <h2 class="section-title">Sản phẩm</h2>
+                <p class="section-subtitle">
+                    Ván ép đạt chuẩn xuất khẩu, nguyên liệu chất lượng cao. Độ dày tiêu chuẩn linh hoạt 3mm – 20mm,
+                    đáp ứng nhu cầu sản xuất công nghiệp. Có thể sản xuất theo yêu cầu riêng.
+                </p>
+            </div>
+            <div class="header-right">
+                <a href="./vn/products/index.html" class="view-all-link">
+                    Xem toàn bộ sản phẩm <i class="fa-solid fa-arrow-right-long"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-img-wrapper">
+                    <img src="./assets/images/van_ep_phu_phim_1.png" alt="Ván ép phủ phim">
+                </div>
+                <div class="product-content">
+                    <h3 class="p-name">Ván ép phủ phim</h3>
+                    <p class="p-desc">Ván ép phủ phim có bề mặt bền, chống nước tốt. Phù hợp cho cốp pha xây dựng và các ứng dụng công nghiệp.</p>
+                    <div class="p-tags">
+                        <span>12mm</span><span>14mm</span><span>15mm</span><span>18mm</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-img-wrapper">
+                    <img src="./assets/images/van_ep_mat_bintagor_1.png" alt="Ván ép mặt Bintangor">
+                </div>
+                <div class="product-content">
+                    <h3 class="p-name">Ván ép mặt Bintangor</h3>
+                    <p class="p-desc">Ván ép mặt Bintangor có bề mặt mịn, vân gỗ đẹp, dễ gia công. Thích hợp cho nội thất và trang trí.</p>
+                    <div class="p-tags">
+                        <span>3mm</span><span>8mm</span><span>11mm</span><span>13mm</span><span>15mm</span><span>20mm</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-img-wrapper">
+                    <img src="./assets/images/van_ep_mat_trang_1.png" alt="Ván ép mặt trắng">
+                </div>
+                <div class="product-content">
+                    <h3 class="p-name">Ván ép mặt trắng</h3>
+                    <p class="p-desc">Ván ép mặt trắng có bề mặt sáng, phẳng, dễ sơn phủ. Phù hợp cho nội thất, tủ kệ và đồ gỗ công nghiệp.</p>
+                    <div class="p-tags">
+                        <span>2mm</span><span>3mm</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* --- SECTION PRODUCTS STYLES --- */
+    .products-section {
+        padding: 80px 0;
+        /* Màu nền sáng hơn theo yêu cầu */
+        background-color: #F8F9FA;
+        border-top: 1px solid #E5E7EB;
+        border-bottom: 1px solid #E5E7EB;
+    }
+
+    .products-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 50px;
+    }
+
+    .header-left {
+        max-width: 650px;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+        font-weight: 800;
+        color: #513C2E; /* var(--primary-dark) */
+        margin-bottom: 12px;
+    }
+
+    .section-subtitle {
+        font-size: 0.95rem;
+        color: #6B7280;
+        line-height: 1.6;
+    }
+
+    .view-all-link {
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: #6B7280;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        transition: all 0.3s ease;
+        text-decoration: none;
+    }
+
+    .view-all-link:hover {
+        color: #513C2E;
+        gap: 12px;
+    }
+
+    /* Lưới 3 cột cùng 1 hàng */
+    .products-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+
+    /* Card sản phẩm */
+    .product-card {
+        background: #FFFFFF;
+        border-radius: 16px;
+        overflow: hidden;
+        border: 1px solid #E5E7EB;
+        transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .product-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+        border-color: #B1967F; /* var(--accent-wood) */
+    }
+
+    /* Ảnh sản phẩm có margin 15px như sản phẩm 1 */
+    .product-img-wrapper {
+        margin: 15px;
+        height: 200px;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+    .product-img-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Nội dung văn bản - Đã sửa lỗi sát lề của sp 2, 3 */
+    .product-content {
+        padding: 0 25px 25px 25px; /* Đẩy lề vào 25px đồng nhất */
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .p-name {
+        font-size: 1.2rem;
+        font-weight: 800;
+        color: #513C2E;
+        margin-bottom: 10px;
+    }
+
+    .p-desc {
+        font-size: 0.85rem;
+        color: #6B7280;
+        line-height: 1.5;
+        margin-bottom: 20px;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        min-height: 4.5em;
+    }
+
+    /* Tag kích thước với màu F7F2EE */
+    .p-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-top: auto;
+    }
+
+    .p-tags span {
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: #4B5563;
+        background: #F7F2EE; /* Màu nút theo yêu cầu */
+        padding: 5px 12px;
+        border-radius: 6px;
+        border: 1px solid #E5E7EB;
+        transition: all 0.3s ease;
+    }
+
+    .product-card:hover .p-tags span {
+        background: #513C2E;
+        color: #FFFFFF;
+        border-color: #513C2E;
+    }
+
+    /* Responsive cho mobile và tablet */
+    @media (max-width: 992px) {
+        .products-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
+        .products-grid { grid-template-columns: 1fr; }
+        .products-header { flex-direction: column; align-items: flex-start; gap: 20px; }
+    }
+</style>
+
+<section class="features-section">
+    <div class="container">
+        <div class="features-header">
+            <span class="features-sub">LỢI THẾ CỦA CHÚNG TÔI</span>
+            <h2 class="features-title">Lý do chọn chúng tôi</h2>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-top">
+                    <p>Ván ép được kiểm soát nghiêm ngặt từ nguyên liệu đến thành phẩm, quy trình chuẩn hóa, đáp ứng tiêu chuẩn kỹ thuật của thị trường.</p>
+                </div>
+                <div class="feature-bottom">
+                    <div class="feature-icon">
+                        <img src="./assets/images/mat_go_1.svg" alt="Chất lượng">
+                    </div>
+                    <div class="feature-text">
+                        <h4>Chất lượng ổn định</h4>
+                        <span>Tiêu chuẩn thị trường</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-top">
+                    <p>Nhà máy chủ động nguồn cung, đáp ứng đơn hàng container, đảm bảo tiến độ giao hàng cho doanh nghiệp và các dự án lớn.</p>
+                </div>
+                <div class="feature-bottom">
+                    <div class="feature-icon">
+                        <img src="./assets/images/mat_go_2.svg" alt="Sản xuất">
+                    </div>
+                    <div class="feature-text">
+                        <h4>Sản xuất chủ động</h4>
+                        <span>Đáp ứng mọi tiến độ</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-top">
+                    <p>Vị trí gần vùng nguyên liệu giúp tối ưu giá thành; đội ngũ tư vấn hỗ trợ giải pháp tiết kiệm chi phí và giảm rủi ro chuỗi cung ứng.</p>
+                </div>
+                <div class="feature-bottom">
+                    <div class="feature-icon">
+                        <img src="./assets/images/mat_go_3.svg" alt="Chi phí">
+                    </div>
+                    <div class="feature-text">
+                        <h4>Chi phí tối ưu</h4>
+                        <span>Tiết kiệm cho doanh nghiệp</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* --- CSS CHO PHẦN LÝ DO CHỌN CHÚNG TÔI --- */
+    .features-section {
+        padding: 100px 0;
+        background-color: #FFFFFF;
+    }
+
+    .features-header {
+        margin-bottom: 50px;
+    }
+
+    .features-sub {
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: #B1967F;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .features-title {
+        font-size: 2.4rem;
+        font-weight: 800;
+        color: #513C2E;
+    }
+
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+
+    /* CARD VỚI LINEAR GRADIENT: TRÊN ĐẬM (F7F2EE) - DƯỚI SÁNG (FFFFFF) */
+    .feature-card {
+        /* Chỉnh góc 180deg: F7F2EE ở trên (0%) và FFFFFF ở dưới (100%) */
+        background: linear-gradient(180deg, #F7F2EE 0%, #FFFFFF 100%);
+        border-radius: 20px;
+        padding: 45px 35px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 320px;
+        border: 1px solid #EAE6E2;
+        transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .feature-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 30px rgba(81, 60, 46, 0.08);
+        border-color: #B1967F;
+        /* Khi hover có thể đổi gradient ngược lại hoặc giữ nguyên tùy ý bạn */
+    }
+
+    .feature-top p {
+        font-size: 0.95rem;
+        line-height: 1.7;
+        color: #4B5563; /* Màu xám đậm cho chữ dễ đọc trên nền kem */
+    }
+
+    .feature-bottom {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-top: 30px;
+        padding-top: 25px;
+        /* Đường kẻ mờ phân tách phần icon */
+        border-top: 1px solid rgba(81, 60, 46, 0.1);
+    }
+
+    .feature-icon {
+        width: 44px;
+        height: 44px;
+        flex-shrink: 0;
+    }
+
+    .feature-icon img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .feature-text h4 {
+        font-size: 1.1rem;
+        font-weight: 800;
+        color: #513C2E;
+        margin-bottom: 4px;
+    }
+
+    .feature-text span {
+        font-size: 0.8rem;
+        color: #8C7E74;
+        font-weight: 500;
+    }
+
+    /* Responsive cho máy tính bảng và điện thoại */
+    @media (max-width: 992px) {
+        .features-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+        .features-grid { grid-template-columns: 1fr; }
+        .features-title { font-size: 2rem; }
+    }
+</style>
+<section class="counter-section">
+    <div class="container">
+        <div class="counter-grid">
+            <div class="counter-item">
+                <div class="counter-content">
+                    <div class="counter-icon">
+                        <img src="./assets/images/counter_2m.svg" alt="Supply">
+                    </div>
+                    <div class="counter-info">
+                        <h3 class="counter-number">2M+</h3>
+                        <p class="counter-label">ĐÃ ĐƯỢC CUNG ỨNG</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="counter-item">
+                <div class="counter-content">
+                    <div class="counter-icon">
+                        <img src="./assets/images/counter_10.svg" alt="Global">
+                    </div>
+                    <div class="counter-info">
+                        <h3 class="counter-number">10+</h3>
+                        <p class="counter-label">QUỐC GIA ĐÃ PHỤC VỤ</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="counter-item">
+                <div class="counter-content">
+                    <div class="counter-icon">
+                        <img src="./assets/images/counter_7y.svg" alt="Quality">
+                    </div>
+                    <div class="counter-info">
+                        <h3 class="counter-number">7 Yrs+</h3>
+                        <p class="counter-label">CAM KẾT CHẤT LƯỢNG</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="counter-item">
+                <div class="counter-content">
+                    <div class="counter-icon">
+                        <img src="./assets/images/counter_24h.svg" alt="Support">
+                    </div>
+                    <div class="counter-info">
+                        <h3 class="counter-number">24 Hr</h3>
+                        <p class="counter-label">TƯ VẤN & BÁO GIÁ</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .counter-section {
+        padding: 100px 0;
+        position: relative;
+        background-color: #3d2b1f;
+        /* Giữ hiệu ứng tối 2 bên sáng giữa của bạn */
+        background-image:
+                linear-gradient(
+                        90deg,
+                        rgba(0, 0, 0, 0.45) 0%,
+                        rgba(0, 0, 0, 0.1) 50%,
+                        rgba(0, 0, 0, 0.45) 100%
+                ),
+                url("./assets/images/background_go.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: #FFFFFF;
+        align-items: center;
+    }
+
+    .counter-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        /* Tăng khoảng cách giữa các phần rộng hơn */
+        gap: 40px;
+        width: 100%;
+    }
+
+    .counter-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        /* Đường kẻ màu nâu sáng bên trái cho cả 4 content */
+        border-left: 3px solid rgba(196, 164, 132, 0.4); /* Màu nâu sáng/Tan nhẹ */
+        padding-left: 40px; /* Tăng khoảng cách từ đường kẻ đến nội dung */
+    }
+
+    .counter-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px; /* Khoảng cách giữa logo và chữ */
+    }
+
+    .counter-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .counter-icon img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .counter-number {
+        font-size: 2.6rem; /* Tăng kích thước theo Figma */
+        font-weight: 800;
+        margin: 0;
+        line-height: 1;
+    }
+
+    .counter-label {
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.7);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-top: 5px;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+        .counter-grid { grid-template-columns: repeat(2, 1fr); gap: 50px; }
+        .counter-item { padding-left: 30px; }
+    }
+
+    @media (max-width: 640px) {
+        .counter-grid { grid-template-columns: 1fr; gap: 30px; }
+        .counter-item { border-left: 2px solid rgba(196, 164, 132, 0.3); padding-left: 20px; }
+    }
+</style>
+
+<section class="contact-section">
+    <div class="container">
+        <div class="contact-wrapper">
+            <div class="contact-info-panel">
+                <div class="contact-info-content">
+                    <span class="contact-sub">LIÊN HỆ NHẬN BÁO GIÁ NGAY</span>
+                    <h2 class="contact-title">Sẵn sàng bổ sung nguồn hàng cho kho của bạn?</h2>
+                    <p class="contact-desc">
+                        Nhận báo giá cạnh tranh ngay hôm nay. Đội ngũ của chúng tôi phản hồi mọi yêu cầu đơn hàng.
+                    </p>
+
+                    <div class="contact-method-list">
+                        <div class="method-item">
+                            <div class="method-icon">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div class="method-text">
+                                <strong>Sale contact</strong>
+                                <div>(+84) 916 884 008</div>
+                                <div>(+84) 762 012 459</div>
+                            </div>
+                        </div>
+                        <div class="method-item">
+                            <div class="method-icon">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="method-text">
+                                <strong>Email</strong>
+                                <span>tmdvvietnam@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form-panel">
+                <form id="quoteForm" class="quote-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Họ & Tên</label>
+                            <input type="text" placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label>Tên công ty</label>
+                            <input type="text" placeholder="Construction Co.">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" placeholder="name@company.com">
+                    </div>
+                    <div class="form-group">
+                        <label>SĐT</label>
+                        <input type="tel" placeholder="+1 (555) 000-0000">
+                    </div>
+                    <div class="form-group">
+                        <label>Yêu cầu báo giá</label>
+                        <textarea placeholder="Mô tả nhu cầu của bạn" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Yêu cầu báo giá</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* 1. NỀN SECTION MÀU F7F2EE */
+    .contact-section {
+        padding: 100px 0;
+        background-color: #F7F2EE;
+    }
+
+    /* 2. ĐỔ BÓNG NHẸ CHO TOÀN BỘ WRAPPER */
+    .contact-wrapper {
+        display: flex;
+        background-color: #FFFFFF;
+        border-radius: 24px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(81, 60, 46, 0.08); /* Đổ bóng nhẹ tự nhiên */
+        max-width: 1140px;
+        margin: 0 auto;
+    }
+
+    /* 3. GRADIENT CHO PANEL THÔNG TIN: F7F2EE -> E8DACD */
+    .contact-info-panel {
+        flex: 0 0 45%;
+        background: linear-gradient(135deg, #F7F2EE 0%, #E8DACD 100%);
+        padding: 60px;
+        display: flex;
+        align-items: center;
+    }
+
+    /* 4. ĐIỀU CHỈNH KÍCH THƯỚC CHỮ NHỎ HƠN */
+    .contact-sub {
+        font-size: 0.75rem; /* Nhỏ hơn */
+        font-weight: 700;
+        color: #8C7E74;
+        letter-spacing: 1px;
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    .contact-title {
+        font-size: 1.8rem; /* Nhỏ hơn so với 2.2rem trước đó */
+        font-weight: 800;
+        color: #513C2E;
+        line-height: 1.3;
+        margin-bottom: 20px;
+    }
+
+    .contact-desc {
+        font-size: 0.9rem; /* Nhỏ hơn */
+        color: #6B7280;
+        line-height: 1.6;
+        margin-bottom: 40px;
+    }
+
+    .contact-method-list {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .method-item {
+        display: flex;
+        gap: 15px;
+        align-items: flex-start;
+    }
+
+    .method-icon {
+        width: 40px;
+        height: 40px;
+        background-color: #FFFFFF;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #513C2E;
+        font-size: 1rem;
+        flex-shrink: 0;
+    }
+
+    .method-text strong {
+        font-size: 0.95rem;
+        color: #513C2E;
+        margin-bottom: 4px;
+    }
+
+    .method-text span {
+        font-size: 0.85rem;
+        color: #6B7280;
+    }
+
+    /* PHẦN FORM */
+    .contact-form-panel {
+        flex: 1;
+        padding: 60px;
+    }
+
+    .quote-form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .form-group label {
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: #513C2E;
+        margin-bottom: 6px;
+        display: block;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        width: 100%;
+        padding: 12px 16px;
+        border: 1px solid #EAE6E2;
+        border-radius: 8px;
+        font-size: 0.9rem;
+        background-color: #FDFDFD;
+    }
+
+    /* 5. GRADIENT CHO NÚT: BEA48E -> 746456 */
+    .btn-submit {
+        margin-top: 10px;
+        background: linear-gradient(90deg, #BEA48E 0%, #746456 100%);
+        color: #FFFFFF;
+        padding: 15px;
+        border: none;
+        border-radius: 8px;
+        font-size: 1rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: opacity 0.3s ease;
+    }
+
+    .btn-submit:hover {
+        opacity: 0.9;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 992px) {
+        .contact-wrapper { flex-direction: column; }
+        .contact-info-panel { flex: 1; padding: 40px; }
+    }
+</style>
+
+<footer class="footer-section">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-column info-col">
+                <div class="footer-logo">
+                    <img src="./assets/images/logo.svg" alt="VIETPLYWOOD">
+                    <span class="logo-text">VIETPLYWOOD</span>
+                </div>
+                <p class="company-desc">
+                    Nhà sản xuất ván ép hàng đầu, phục vụ nhu cầu<br>công nghiệp và dân dụng.
+                    <br><br>
+                    Xây dựng uy tín thông qua chất lượng ổn định<br>và hợp tác dài hạn.
+                </p>
+            </div>
+
+            <div class="footer-column">
+                <h4 class="footer-title">Sản phẩm</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Ván ép phủ phim</a></li>
+                    <li><a href="#">Ván ép mặt bintangor</a></li>
+                    <li><a href="#">Ván ép mặt Okoume</a></li>
+                    <li><a href="#">Ván ép mặt trắng</a></li>
+                    <li><a href="#">Ván ép mặt xoan Veneer</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4 class="footer-title">Liên hệ</h4>
+                <ul class="contact-list">
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Khu Liên Đồng, Xã Thanh Sơn,<br>Tỉnh Phú Thọ, Việt Nam</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <span>(+84) 916 884 008<br>(+84) 762 012 459</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>tmdvvietnam@gmail.com</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4 class="footer-title">Giới thiệu công ty</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Về chúng tôi</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="copyright">© 2023 PlyMaster B2B Inc. All rights reserved.</p>
+            <div class="footer-social">
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+<style>
+    .footer-section {
+        padding: 80px 0 30px;
+        background-color: #FFFFFF;
+        border-top: 1px solid #F0EAE5;
+        text-align: left; /* Đảm bảo căn lề trái toàn bộ */
+    }
+
+    .footer-grid {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr 1fr;
+        gap: 40px;
+        padding-bottom: 50px;
+        border-bottom: 1px solid #F0EAE5;
+    }
+
+    /* Căn chỉnh cột đầu tiên */
+    .info-col {
+        text-align: left; /* Căn lề trái nội dung bên trong */
+    }
+
+    .footer-logo {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start; /* Căn logo về bên trái */
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .footer-logo img {
+        height: 35px;
+    }
+
+    .logo-text {
+        font-size: 1.1rem;
+        font-weight: 800;
+        color: #513C2E;
+        letter-spacing: 0.5px;
+    }
+
+    .company-desc {
+        font-size: 0.85rem;
+        color: #8C7E74;
+        line-height: 1.6;
+        margin: 0; /* Loại bỏ margin tự động để căn lề trái chuẩn */
+    }
+
+    .footer-title {
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: #513C2E;
+        margin-bottom: 25px;
+        text-align: left; /* Căn lề trái tiêu đề */
+    }
+
+    .footer-links, .contact-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-align: left; /* Căn lề trái danh sách */
+    }
+
+    .footer-links li, .contact-list li {
+        margin-bottom: 12px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .footer-links a, .contact-list span {
+        text-decoration: none;
+        color: #8C7E74;
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+
+    .contact-list i {
+        color: #513C2E;
+        margin-top: 4px;
+        margin-right: 12px;
+        width: 15px;
+        text-align: center;
+    }
+
+    .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 25px;
+    }
+
+    .copyright {
+        font-size: 0.75rem;
+        color: #A3968C;
+    }
+
+    .footer-social {
+        display: flex;
+        gap: 15px;
+    }
+
+    .footer-social a {
+        color: #A3968C;
+        font-size: 1.1rem;
+    }
+
+    /* Responsive cho Mobile */
+    @media (max-width: 992px) {
+        .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 600px) {
+        .footer-grid { grid-template-columns: 1fr; }
+        .footer-bottom { flex-direction: column; gap: 15px; align-items: flex-start; }
+    }
+</style>
+
+<div id="success-toast" class="toast-message">
+    <div class="toast-content">
+        <i class="fa-solid fa-circle-check"></i>
+        <span>Gửi yêu cầu thành công! Chúng tôi sẽ liên hệ lại sớm.</span>
+    </div>
+</div>
+
+<style>
+    .toast-message {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: #513C2E; /* Màu nâu đậm theo tông thiết kế của bạn */
+        color: white;
+        padding: 16px 25px;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        z-index: 9999;
+        transform: translateY(-150%);
+        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .toast-message.show {
+        transform: translateY(0);
+    }
+
+    .toast-content i {
+        color: #BEA48E; /* Màu vàng beige */
+        font-size: 1.2rem;
+    }
+
+    .toast-content span {
+        font-size: 0.9rem;
+        font-weight: 500;
+    }
+</style>
+
+<script>
+    const API_URL = 'https://script.google.com/macros/s/AKfycbxrk4VOK1w2XNJfrRGYDyWkprMBPONZ5BNGCENr8pig99oMIQX2d9dR6UlwxB5vSp4/exec';
+
+    document.getElementById('quoteForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const btn = this.querySelector('.btn-submit');
+        const toast = document.getElementById('success-toast');
+
+        // Trạng thái đang gửi
+        btn.innerText = 'Đang xử lý...';
+        btn.style.opacity = '0.7';
+        btn.style.pointerEvents = 'none';
+
+        const formData = {
+            name: this.querySelector('input[placeholder="John Doe"]').value,
+            ctyName: this.querySelector('input[placeholder="Construction Co."]').value,
+            email: this.querySelector('input[type="email"]').value,
+            phone: this.querySelector('input[type="tel"]').value,
+            content: this.querySelector('textarea').value,
+            title: "Yêu cầu từ web",
+            status: "Đã gửi qua API"
+        };
+
+        fetch(API_URL, {
+            method: 'POST',
+            mode: 'no-cors',
+            cache: 'no-cache',
+            body: JSON.stringify(formData)
+        })
+            .then(() => {
+                // Hiện thông báo thành công đẹp mắt
+                toast.classList.add('show');
+                this.reset(); // Xóa dữ liệu form
+
+                // Tự động ẩn thông báo sau 3 giây
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                }, 3500);
+            })
+            .catch(() => {
+                alert('Có lỗi xảy ra, vui lòng liên hệ hotline.');
+            })
+            .finally(() => {
+                // Khôi phục nút bấm
+                btn.innerText = 'Yêu cầu báo giá';
+                btn.style.opacity = '1';
+                btn.style.pointerEvents = 'auto';
+            });
+    });
+</script>
+
+<script>
+    // Giữ nguyên logic Menu Mobile và Lang Selector của bạn
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+    });
+
+    const langSelect = document.getElementById('langSelect');
+    langSelect.addEventListener('click', (e) => {
+        e.stopPropagation();
+        langSelect.classList.toggle('open');
+    });
+    document.querySelectorAll('.option').forEach(opt => {
+        opt.addEventListener('click', () => {
+            document.getElementById('currentLang').innerText = opt.dataset.value;
+        });
+    });
+    window.onclick = () => langSelect.classList.remove('open');
+</script>
+
+</body>
+</html>
