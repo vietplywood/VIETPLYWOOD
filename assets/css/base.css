@@ -114,6 +114,8 @@ a { text-decoration: none; color: inherit; }
     margin-bottom: 20px;font-size: medium;
 }
 
+html { font-size: 16px; }
+
 /* --- RESPONSIVE MEDIA QUERIES --- */
 @media (max-width: 992px) {
     .nav-links { display: none; }
@@ -122,6 +124,7 @@ a { text-decoration: none; color: inherit; }
 }
 
 @media (max-width: 600px) {
+    .container { max-width: 100%; margin: 0 auto; padding: 0 20px; }
 
     .footer-grid { grid-template-columns: 1fr; }
     .footer-bottom { flex-direction: column; gap: 15px; align-items: flex-start; }
@@ -133,6 +136,8 @@ a { text-decoration: none; color: inherit; }
         width: 100%;
         text-align: center;
     }
+
+    html { font-size: 14px; }
 }
 
 /* Nav Mobile Menu */
@@ -141,3 +146,6 @@ a { text-decoration: none; color: inherit; }
     top: 100%; left: 0; right: 0; background: white;
     padding: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
+
+
+
