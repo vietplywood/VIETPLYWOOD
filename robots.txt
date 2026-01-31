@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://phuocpt98.github.io/VIETPLYWOOD/sitemap.xml
+Sitemap: https://tmdvvietnamsale.github.io/VIETPLYWOOD/sitemap.xml

@@ -3,7 +3,7 @@
 
     <!-- ===== HOME (Default / VN root) ===== -->
     <url>
-        <loc>https://phuocpt98.github.io/VIETPLYWOOD/</loc>
+        <loc>https://tmdvvietnamsale.github.io/VIETPLYWOOD/</loc>
         <lastmod>2026-01-28</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -11,7 +11,7 @@
 
     <!-- ===== EN HOME ===== -->
     <url>
-        <loc>https://phuocpt98.github.io/VIETPLYWOOD/en/</loc>
+        <loc>https://tmdvvietnamsale.github.io/VIETPLYWOOD/en/</loc>
         <lastmod>2026-01-28</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
@@ -19,14 +19,14 @@
 
     <!-- ===== VIETNAMESE PAGES ===== -->
     <url>
-        <loc>https://phuocpt98.github.io/VIETPLYWOOD/vn/catalog/</loc>
+        <loc>https://tmdvvietnamsale.github.io/VIETPLYWOOD/vn/catalog/</loc>
         <lastmod>2026-01-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://phuocpt98.github.io/VIETPLYWOOD/vn/products/</loc>
+        <loc>https://tmdvvietnamsale.github.io/VIETPLYWOOD/vn/products/</loc>
         <lastmod>2026-01-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -34,31 +34,31 @@
 
     <!-- VN – Product details -->
     <url>
-        <loc>https://phuocpt98.github.io/VIETPLYWOOD/vn/products/film-faced.html</loc>
+        <loc>https://tmdvvietnamsale.github.io/VIETPLYWOOD/vn/products/film-faced.html</loc>
         <lastmod>2026-01-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://phuocpt98.github.io/VIETPLYWOOD/vn/products/bintagor.html</loc>
+        <loc>https://tmdvvietnamsale.github.io/VIETPLYWOOD/vn/products/bintagor.html</loc>
         <lastmod>2026-01-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://phuocpt98.github.io/VIETPLYWOOD/vn/products/okoume.html</loc>
+        <loc>https://tmdvvietnamsale.github.io/VIETPLYWOOD/vn/products/okoume.html</loc>
         <lastmod>2026-01-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://phuocpt98.github.io/VIETPLYWOOD/vn/products/white-face.html</loc>
+        <loc>https://tmdvvietnamsale.github.io/VIETPLYWOOD/vn/products/white-face.html</loc>
         <lastmod>2026-01-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://phuocpt98.github.io/VIETPLYWOOD/vn/products/veneer.html</loc>
+        <loc>https://tmdvvietnamsale.github.io/VIETPLYWOOD/vn/products/veneer.html</loc>
         <lastmod>2026-01-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
@@ -66,75 +66,75 @@
 
     <!-- VN – Blogs -->
     <url>
-        <loc>https://phuocpt98.github.io/VIETPLYWOOD/vn/blogs/</loc>
+        <loc>https://tmdvvietnamsale.github.io/VIETPLYWOOD/vn/blogs/</loc>
         <lastmod>2026-01-28</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
     </url>
     <url>
-        <loc>https://phuocpt98.github.io/VIETPLYWOOD/vn/blogs/blog_1.html</loc>
+        <loc>https://tmdvvietnamsale.github.io/VIETPLYWOOD/vn/blogs/blog_1.html</loc>
         <lastmod>2026-01-28</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://phuocpt98.github.io/VIETPLYWOOD/vn/blogs/blog_2.html</loc>
+        <loc>https://tmdvvietnamsale.github.io/VIETPLYWOOD/vn/blogs/blog_2.html</loc>
         <lastmod>2026-01-28</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://phuocpt98.github.io/VIETPLYWOOD/vn/blogs/blog_3.html</loc>
+        <loc>https://tmdvvietnamsale.github.io/VIETPLYWOOD/vn/blogs/blog_3.html</loc>
         <lastmod>2026-01-28</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://phuocpt98.github.io/VIETPLYWOOD/vn/blogs/blog_4.html</loc>
+        <loc>https://tmdvvietnamsale.github.io/VIETPLYWOOD/vn/blogs/blog_4.html</loc>
         <lastmod>2026-01-28</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://phuocpt98.github.io/VIETPLYWOOD/vn/blogs/blog_5.html</loc>
+        <loc>https://tmdvvietnamsale.github.io/VIETPLYWOOD/vn/blogs/blog_5.html</loc>
         <lastmod>2026-01-28</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://phuocpt98.github.io/VIETPLYWOOD/vn/blogs/blog_6.html</loc>
+        <loc>https://tmdvvietnamsale.github.io/VIETPLYWOOD/vn/blogs/blog_6.html</loc>
         <lastmod>2026-01-28</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://phuocpt98.github.io/VIETPLYWOOD/vn/blogs/blog_7.html</loc>
+        <loc>https://tmdvvietnamsale.github.io/VIETPLYWOOD/vn/blogs/blog_7.html</loc>
         <lastmod>2026-01-28</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://phuocpt98.github.io/VIETPLYWOOD/vn/blogs/blog_8.html</loc>
+        <loc>https://tmdvvietnamsale.github.io/VIETPLYWOOD/vn/blogs/blog_8.html</loc>
         <lastmod>2026-01-28</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://phuocpt98.github.io/VIETPLYWOOD/vn/blogs/blog_9.html</loc>
+        <loc>https://tmdvvietnamsale.github.io/VIETPLYWOOD/vn/blogs/blog_9.html</loc>
         <lastmod>2026-01-28</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
 
     <url>
-        <loc>https://phuocpt98.github.io/VIETPLYWOOD/vn/about/</loc>
+        <loc>https://tmdvvietnamsale.github.io/VIETPLYWOOD/vn/about/</loc>
         <lastmod>2026-01-28</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.6</priority>
     </url>
 
     <url>
-        <loc>https://phuocpt98.github.io/VIETPLYWOOD/vn/contact/</loc>
+        <loc>https://tmdvvietnamsale.github.io/VIETPLYWOOD/vn/contact/</loc>
         <lastmod>2026-01-28</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.6</priority>
@@ -142,14 +142,14 @@
 
     <!-- ===== ENGLISH PAGES ===== -->
     <url>
-        <loc>https://phuocpt98.github.io/VIETPLYWOOD/en/catalog/</loc>
+        <loc>https://tmdvvietnamsale.github.io/VIETPLYWOOD/en/catalog/</loc>
         <lastmod>2026-01-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://phuocpt98.github.io/VIETPLYWOOD/en/products/</loc>
+        <loc>https://tmdvvietnamsale.github.io/VIETPLYWOOD/en/products/</loc>
         <lastmod>2026-01-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -157,31 +157,31 @@
 
     <!-- EN – Product details -->
     <url>
-        <loc>https://phuocpt98.github.io/VIETPLYWOOD/en/products/film-faced.html</loc>
+        <loc>https://tmdvvietnamsale.github.io/VIETPLYWOOD/en/products/film-faced.html</loc>
         <lastmod>2026-01-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://phuocpt98.github.io/VIETPLYWOOD/en/products/bintagor.html</loc>
+        <loc>https://tmdvvietnamsale.github.io/VIETPLYWOOD/en/products/bintagor.html</loc>
         <lastmod>2026-01-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://phuocpt98.github.io/VIETPLYWOOD/en/products/okoume.html</loc>
+        <loc>https://tmdvvietnamsale.github.io/VIETPLYWOOD/en/products/okoume.html</loc>
         <lastmod>2026-01-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://phuocpt98.github.io/VIETPLYWOOD/en/products/white-face.html</loc>
+        <loc>https://tmdvvietnamsale.github.io/VIETPLYWOOD/en/products/white-face.html</loc>
         <lastmod>2026-01-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://phuocpt98.github.io/VIETPLYWOOD/en/products/veneer.html</loc>
+        <loc>https://tmdvvietnamsale.github.io/VIETPLYWOOD/en/products/veneer.html</loc>
         <lastmod>2026-01-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
@@ -189,61 +189,61 @@
 
     <!-- EN – Blogs -->
     <url>
-        <loc>https://phuocpt98.github.io/VIETPLYWOOD/en/blogs/</loc>
+        <loc>https://tmdvvietnamsale.github.io/VIETPLYWOOD/en/blogs/</loc>
         <lastmod>2026-01-28</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
     </url>
     <url>
-        <loc>https://phuocpt98.github.io/VIETPLYWOOD/en/blogs/blog_1.html</loc>
+        <loc>https://tmdvvietnamsale.github.io/VIETPLYWOOD/en/blogs/blog_1.html</loc>
         <lastmod>2026-01-28</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://phuocpt98.github.io/VIETPLYWOOD/en/blogs/blog_2.html</loc>
+        <loc>https://tmdvvietnamsale.github.io/VIETPLYWOOD/en/blogs/blog_2.html</loc>
         <lastmod>2026-01-28</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://phuocpt98.github.io/VIETPLYWOOD/en/blogs/blog_3.html</loc>
+        <loc>https://tmdvvietnamsale.github.io/VIETPLYWOOD/en/blogs/blog_3.html</loc>
         <lastmod>2026-01-28</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://phuocpt98.github.io/VIETPLYWOOD/en/blogs/blog_4.html</loc>
+        <loc>https://tmdvvietnamsale.github.io/VIETPLYWOOD/en/blogs/blog_4.html</loc>
         <lastmod>2026-01-28</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://phuocpt98.github.io/VIETPLYWOOD/en/blogs/blog_5.html</loc>
+        <loc>https://tmdvvietnamsale.github.io/VIETPLYWOOD/en/blogs/blog_5.html</loc>
         <lastmod>2026-01-28</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://phuocpt98.github.io/VIETPLYWOOD/en/blogs/blog_6.html</loc>
+        <loc>https://tmdvvietnamsale.github.io/VIETPLYWOOD/en/blogs/blog_6.html</loc>
         <lastmod>2026-01-28</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://phuocpt98.github.io/VIETPLYWOOD/en/blogs/blog_7.html</loc>
+        <loc>https://tmdvvietnamsale.github.io/VIETPLYWOOD/en/blogs/blog_7.html</loc>
         <lastmod>2026-01-28</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://phuocpt98.github.io/VIETPLYWOOD/en/blogs/blog_8.html</loc>
+        <loc>https://tmdvvietnamsale.github.io/VIETPLYWOOD/en/blogs/blog_8.html</loc>
         <lastmod>2026-01-28</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://phuocpt98.github.io/VIETPLYWOOD/en/blogs/blog_9.html</loc>
+        <loc>https://tmdvvietnamsale.github.io/VIETPLYWOOD/en/blogs/blog_9.html</loc>
         <lastmod>2026-01-28</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
@@ -251,14 +251,14 @@
 
     <!-- EN – About & Contact -->
     <url>
-        <loc>https://phuocpt98.github.io/VIETPLYWOOD/en/about/</loc>
+        <loc>https://tmdvvietnamsale.github.io/VIETPLYWOOD/en/about/</loc>
         <lastmod>2026-01-28</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.6</priority>
     </url>
 
     <url>
-        <loc>https://phuocpt98.github.io/VIETPLYWOOD/en/contact/</loc>
+        <loc>https://tmdvvietnamsale.github.io/VIETPLYWOOD/en/contact/</loc>
         <lastmod>2026-01-28</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.6</priority>
