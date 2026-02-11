@@ -5,7 +5,13 @@
       "Bash(git add:*)",
       "Bash(dir:*)",
       "Bash(git -C \"D:\\\\project\\\\demo\\\\landing-lywood-v2\" log --oneline -10)",
-      "Bash(perl -i -0pe 's/\\([ \\\\t]*<div class=\"option\" data-value=\"VN\">.*?<\\\\/div>\\)\\\\n\\([ \\\\t]*<div class=\"option\" data-value=\"EN\">.*?<\\\\/div>\\)/$2\\\\n$1/g' index.html en/**/*.html vn/**/*.html)"
+      "Bash(perl -i -0pe 's/\\([ \\\\t]*<div class=\"option\" data-value=\"VN\">.*?<\\\\/div>\\)\\\\n\\([ \\\\t]*<div class=\"option\" data-value=\"EN\">.*?<\\\\/div>\\)/$2\\\\n$1/g' index.html en/**/*.html vn/**/*.html)",
+      "Bash(powershell:*)",
+      "Bash(pwsh:*)",
+      "Bash(/c/WINDOWS/System32/WindowsPowerShell/v1.0/powershell.exe -Command \"Write-Host ''hello''\")",
+      "Bash(cmd.exe /c \"powershell -Command \"\"Write-Host hello\"\"\")",
+      "Bash(node -e:*)",
+      "Bash(git rebase:*)"
     ]
   }
 }
