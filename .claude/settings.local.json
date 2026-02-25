@@ -4,7 +4,8 @@
       "Bash(git remote set-url:*)",
       "Bash(git add:*)",
       "Bash(dir:*)",
-      "Bash(git -C \"D:\\\\project\\\\demo\\\\landing-lywood-v2\" log --oneline -10)"
+      "Bash(git -C \"D:\\\\project\\\\demo\\\\landing-lywood-v2\" log --oneline -10)",
+      "Bash(perl -i -0pe 's/\\([ \\\\t]*<div class=\"option\" data-value=\"VN\">.*?<\\\\/div>\\)\\\\n\\([ \\\\t]*<div class=\"option\" data-value=\"EN\">.*?<\\\\/div>\\)/$2\\\\n$1/g' index.html en/**/*.html vn/**/*.html)"
     ]
   }
 }
