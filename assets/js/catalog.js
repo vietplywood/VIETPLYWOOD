@@ -16,7 +16,7 @@ for (let i = 1; i <= totalSlides; i++) {
     slide.className = "slide";
     slide.innerHTML = `
         <img
-          src="../../assets/images/${catalogFolder}/${i}.png"
+          src="../../assets/images/${catalogFolder}/${i}.webp"
           alt="Catalog vietplywood ${i}"
           loading="lazy"
           width="1200"
@@ -30,7 +30,7 @@ function updateUI() {
     track.style.transform = `translateX(-${currentIndex * 100}%)`;
     slider.style.setProperty(
         "--bg-image",
-        `url('../../assets/images/${catalogFolder}/${currentIndex + 1}.png')`
+        `url('../../assets/images/${catalogFolder}/${currentIndex + 1}.webp')`
     );
     indicator.textContent = `${currentIndex + 1} / ${totalSlides}`;
 }
