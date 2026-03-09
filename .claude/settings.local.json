@@ -13,7 +13,9 @@
       "Bash(node -e:*)",
       "Bash(git rebase:*)",
       "Bash(grep:*)",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "Bash(git push:*)",
+      "Bash(git pull:*)"
     ]
   }
 }
