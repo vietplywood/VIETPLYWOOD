@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://vietplywood.github.io/VIETPLYWOOD/sitemap.xml
+Sitemap: https://plywoodvietnamexport.com/sitemap.xml

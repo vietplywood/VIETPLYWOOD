@@ -154,5 +154,79 @@ html { font-size: 20px; }
     padding: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
+/* ============================================
+   ANIMATION SYSTEM (Global)
+   ============================================ */
 
+/* --- Hero Stagger Reveal (Page Load) --- */
+.hero-reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1),
+                transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: opacity, transform;
+}
+.hero-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- Fade In Up (Scroll) --- */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+    opacity: 0;
+    will-change: opacity, transform;
+}
+.animate-fade-in.in-view {
+    animation: fadeInUp 1s ease forwards;
+}
+
+/* --- Float (Continuous) --- */
+@keyframes showcaseFloat {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+.float-animation.float-active {
+    animation: showcaseFloat 5s ease-in-out infinite;
+}
+
+/* --- Glow Pulse for CTA (One-time) --- */
+@keyframes ctaGlowPulse {
+    0%   { box-shadow: 0 5px 15px rgba(190, 164, 142, 0.2); }
+    50%  { box-shadow: 0 15px 45px rgba(190, 164, 142, 0.6), 0 0 25px rgba(190, 164, 142, 0.3); }
+    100% { box-shadow: 0 5px 15px rgba(190, 164, 142, 0.2); }
+}
+.cta-btn.glow-pulse {
+    animation: ctaGlowPulse 1.5s ease;
+}
+
+/* --- Modal / Toast Scale In --- */
+@keyframes modalIn {
+    from { transform: translateY(-150%) scale(0.95); opacity: 0; }
+    to   { transform: translateY(0) scale(1); opacity: 1; }
+}
+.toast-message.show {
+    animation: modalIn 0.3s ease;
+}
+
+/* --- Header Shadow on Scroll --- */
+.navbar {
+    transition: box-shadow 0.3s ease;
+}
+.navbar.scrolled {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Accessibility --- */
+@media (prefers-reduced-motion: reduce) {
+    .animate-fade-in { opacity: 1; animation-duration: 0.01ms !important; }
+    .animate-fade-in.in-view { animation-duration: 0.01ms !important; }
+    .hero-reveal { opacity: 1; transform: none; transition: none; }
+    .float-animation.float-active { animation: none; }
+    .cta-btn.glow-pulse { animation: none; }
+}
 

@@ -11,7 +11,9 @@
       "Bash(/c/WINDOWS/System32/WindowsPowerShell/v1.0/powershell.exe -Command \"Write-Host ''hello''\")",
       "Bash(cmd.exe /c \"powershell -Command \"\"Write-Host hello\"\"\")",
       "Bash(node -e:*)",
-      "Bash(git rebase:*)"
+      "Bash(git rebase:*)",
+      "Bash(grep:*)",
+      "Bash(find:*)"
     ]
   }
 }
