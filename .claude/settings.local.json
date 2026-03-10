@@ -23,7 +23,8 @@
       "Bash(npm install:*)",
       "Bash(node convert-images.js:*)",
       "Bash(ls:*)",
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "Bash(node:*)"
     ]
   }
 }
