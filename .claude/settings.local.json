@@ -24,7 +24,10 @@
       "Bash(node convert-images.js:*)",
       "Bash(ls:*)",
       "Bash(curl:*)",
-      "Bash(node:*)"
+      "Bash(node:*)",
+      "Bash(python -c:*)",
+      "Bash(python3:*)",
+      "Bash(py -c:*)"
     ]
   }
 }
